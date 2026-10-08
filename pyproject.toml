@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geospatial-measurement-api"
+version = "0.1.0"
+description = "Geospatial file measurements with explicit CRS resolution"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115,<1",
+    "python-multipart>=0.0.18,<1",
+    "defusedxml>=0.7,<1",
+    "uvicorn>=0.30,<1",
+    "filelock>=3.16,<4",
+    "alembic>=1.14,<2",
+    "pandas>=2.2,<4",
+    "pyogrio>=0.9,<1",
+    "SQLAlchemy>=2.0,<3",
+    "pydantic>=2.8,<3",
+    "pydantic-settings>=2.4,<3",
+    "numpy>=1.26,<3",
+    "geopandas>=1.0,<2",
+    "shapely>=2.1,<3",
+    "pyproj>=3.6,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1"]
+
+[tool.setuptools.packages.find]
+include = ["app*", "migrations*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

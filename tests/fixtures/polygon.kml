@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark id="polygon-1">
+      <name>Polygon sample</name>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>77,28 77.001,28 77.001,28.001 77,28.001 77,28</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+  </Document>
+</kml>
